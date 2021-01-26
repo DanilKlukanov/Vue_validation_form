@@ -1,18 +1,21 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <ValidationForm></ValidationForm>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ValidationForm from '@/components/ValidationForm.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    ValidationForm
+  },
+      loaders: {
+        scss: 'vue-style-loader!css-loader!sass-loader', // <style lang="scss">
+        sass: 'vue-style-loader!css-loader!sass-loader?indentedSyntax' // <style lang="sass"
+      }
 }
 </script>
 
